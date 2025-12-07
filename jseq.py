@@ -16,6 +16,8 @@ import signal
 
 from debug import Debug
 from specs import Specs
+from tune  import Tune
+
 
 def usage():
   print ("usage:",sys.argv[0]," spec file")
@@ -57,3 +59,4 @@ if __name__ == '__main__':
     print("goto",goto)
     
   Debug().enable(specs.s['debug'])
+  tune = Tune(specs)
